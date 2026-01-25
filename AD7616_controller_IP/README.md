@@ -2,9 +2,9 @@
 <img width="1436" height="818" alt="image" src="https://github.com/user-attachments/assets/85a7b722-adcf-406c-9935-e53bc6a4cd1d" />
 
 Simulation ensured that the previous timing constrains has been satisfied.
-The next tables shows the actual timings from the simulation against the required ones specified at page 6.
+The next tables shows the actual timings from the simulation against the required ones specified in the TRM
 
-### AD7616 – Universal Actual Timing
+### ADC – Universal Actual Timing
 
 | Parameter | Min | Typ | Max | Unit | Description | Actual Time (In Design) | Case | Unit |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -29,3 +29,4 @@ The next tables shows the actual timings from the simulation against the require
 | **t_RESET_SETUP (Full Reset)** | 0.05 | – | – | ms | Time prior to release of RESET that queried hardware inputs must be stable | Not Required/Used | - | - |
 | **t_RESET_HOLD (Partial Reset)** | 10 | – | – | ns | Time after release of RESET that queried hardware inputs must be stable | Not Required/Used | - | - |
 | **t_RESET_HOLD (Full Reset)** | 0.24 | – | – | ms | Time after release of RESET that queried hardware inputs must be stable | Not Required/Used | - | - |
+
