@@ -22,7 +22,7 @@ A parameterized **VHDL SPI Master** for reliable high-speed peripheral communica
   - **Self-checking** with VHDL `assert` statements
   - Edge-case coverage (e.g., `CS_n` de-assertion timing and frame sync)
 
-➡️ **Project folder:** [spi_master](./SPI_MASTER)
+➡️ **Project folder:** [SPI_MASTER](./SPI_MASTER)
 
 ---
 
