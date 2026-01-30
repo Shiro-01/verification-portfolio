@@ -1,22 +1,39 @@
-# SPI Master IP with Self-Checking Testbench
+# SPI Master IP (VHDL) — Self‑Checking Testbench Included
 
 ## Overview
-A robust, parameterized SPI Master core implemented in VHDL. This IP provides a reliable communication bridge for peripheral sensors and was developed with a "Verification-First" mindset.
+This folder contains a **parameterized SPI Master** implemented in VHDL.  
+The goal is a clean SPI core that’s easy to integrate in FPGA/SoC projects — and **verified properly**, not just “looks fine in waves”.
+
+I built this with a *verification-first* mindset, so you’ll also find a self-checking testbench that validates real behavior and some important corner cases.
+
+---
 
 ## Core Features
-* **Protocol**: Supports SPI Mode 0 (CPOL=0, CPHA=0).
-* **Interface**: Simple `ena` and `last_byte` control logic for easy integration.
-* **Flexibility**: Parameterized clock frequency and data widths.
+- **SPI Mode:** **Mode 1** (CPOL=0, CPHA=1) 
+- **Integration-friendly control:** simple `ena` + `last_byte` control for clean multi-byte frames
+- **Configurable:** parameterized clock frequency and data width
 
-## Automated Verification
-The quality of this IP is ensured by a self-checking VHDL testbench (`tb_spi_master.vhd`):
-* **SPI Slave BFM**: A behavioral Bus Functional Model (BFM) acts as the SPI Slave, responding to the Master's clock and data lines.
-* **Automated Data Integrity Checks**: Uses VHDL `assert` statements to compare transmitted data against "Golden Reference" values in real-time.
-* **Frame Validation**: Specifically tests the `last_byte` logic to ensure the `CS_n` line de-asserts correctly only at the end of multi-byte frames.
+---
 
+## Verification (Self‑Checking TB)
+The IP is verified with a self-checking VHDL testbench: **`tb_spi_master.vhd`**.
 
+What’s inside:
+- **SPI Slave BFM:** a behavioral SPI Slave model that reacts to the Master’s `SCLK/MOSI/CS_n`
+- **Mode‑1 timing behavior:** while `CS_n` is low, the BFM:
+  - updates `MISO` on the **rising** edge of `SCLK`
+  - samples `MOSI` on the **falling** edge of `SCLK`
+- **Data integrity checks:** VHDL `assert` statements compare the received data against a golden reference automatically
+- **Frame validation:** explicitly tests the `last_byte` behavior to ensure `CS_n` de-asserts only at the correct end-of-frame boundary
 
-## How to Run
-1. Add `spi_master.vhd` and `tb_spi_master.vhd` to your simulation tool (Vivado/Questa/GHDL).
-2. Run simulation for 1ms.
-3. Check the simulator console for the message: `"TB: All SPI tests completed successfully."`
+If the testbench completes without assertion failures, you get a solid baseline confidence in both the protocol behavior and the multi-byte framing logic.
+
+---
+
+## How to Run (quick)
+1. Add these files to your simulator:
+   - `spi_master.vhd`
+   - `tb_spi_master.vhd`
+2. Run the simulation for **~1 ms**
+3. Check the console for:
+   - **`TB: All SPI tests completed successfully.`**
