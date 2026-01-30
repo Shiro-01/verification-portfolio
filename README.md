@@ -51,11 +51,11 @@ The project code itself is proprietary, so I don't have it and can’t share it.
 
 ---
 
-## 💻 Tech Stack used here
+## 💻 Some Tech Stack
 
 - **Languages:** VHDL, SystemVerilog  
 - **Tools:** Vivado, GHDL, GTKWave, EDA Playground
-- **Focus areas:** Synchronous design, AXI-Stream, protocol BFMs, verification-friendly RTL
+- **Focus areas:** Synchronous design, AXI-Stream, BFM, UVM
 
 ---
 
