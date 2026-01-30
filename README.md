@@ -15,11 +15,18 @@ This repository contains high-quality, verified hardware modules designed for FP
 
 [View Project Directory](./spi_master)
 
+### 2. AXI-Stream FIFO & UVM Environment (SystemVerilog)
+**Core Logic:** A VHDL-based AXI-Stream FIFO verified using a full **UVM (Universal Verification Methodology)** suite.
+* **UVM Architecture:** Implements a complete agent (Driver, Monitor, Sequencer) and a Scoreboard for automated data comparison.
+* **Protocol Integrity:** Focuses on $TVALID$ / $TREADY$ handshake stability, backpressure handling, and constrained random stimulus to stress-test FIFO corner cases.
+* **Simulation:** Verified via **EDA Playground** using mixed-language (VHDL/SV) simulation.
+* **[View Project Directory](./axi_stream_fifo_uvm)**
+
 ---
 
 ## 🛰 Industrial Experience (Rocket Factory Augsburg)
 
-During my tenure at RFA, I focused on high-speed data acquisition and SoC verification. While that specific codebase is proprietary, my experience includes:
+During my internship at RFA, I focused on high-speed data acquisition and SoC verification. While that specific codebase is proprietary, my experience includes:
 
 * **ADC Controller Design:** Developing parallel interfaces for 16-channel SAR ADCs.
 * **AXI-Stream Integration:** Designing Master interfaces with full backpressure (`TREADY`) and packetization (`TLAST`).
