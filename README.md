@@ -1,4 +1,4 @@
-# Digital Design & RTL Portfolio
+# Digital Design RTL & Verification Portfolio
 
 Welcome! 👋  
 This repo is my personal portfolio of **FPGA/SoC-ready RTL modules**. My main focus is building designs that are **clean, reusable, and properly verified** 
