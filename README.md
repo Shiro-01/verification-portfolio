@@ -15,7 +15,7 @@ My approach is simple:
 A parameterized **VHDL SPI Master** for reliable high-speed peripheral communication.
 
 **Highlights**
-- **Protocol support:** Mode 0 (CPOL=0, CPHA=1) with configurable clock and data width.
+- **Protocol support:** Mode 1 (CPOL=0, CPHA=1) with configurable clock and data width.
 - **Control flow:** Clean `ena` / `last_byte` handling for smooth multi-byte transfers.
 - **Verification:** Includes a small but effective verification setup:
   - A **BFM** acting as a behavioral SPI Slave
