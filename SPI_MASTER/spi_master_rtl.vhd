@@ -166,7 +166,7 @@ begin
             else
                 -- last byte is being kept high by the controller till he recieves the done signal (which equals Not running) form the spi master. only then he release the last_byte flag. the controller also will be keeping ena low, and no ena stored and ena_dly. 
                 if running = '0' and ena = '0' and ena_dly = '0' and last_byte = '1' then   --also no need for the bit count check = 0, as the running flag gets updated  to  0 on the same trigger bit count = 8
-                    spi_cs <= '1';  -- Tobias added a delay here. figure out why! -- for tmw 
+                    spi_cs <= '1';  
                     
                 elsif  ena = '1' then
                     spi_cs <= '0';  
