@@ -124,7 +124,6 @@ begin
         end if;
     end process bit_count_counter_p;
 
-
     -- Running process, is the process resposible of setting the running internal flag depending on the enable pulse (ena) from the controller and the bit counter to set it back to 0
     -- so running stays high for 8 bits => full 8 spi_sclk cycles + 1 clk
     running_p : process(clk) is 
@@ -154,8 +153,6 @@ begin
             end if;
         end if;
     end process running_p;
-
-
 
     -- CS process,  resposible of pull cs line low (our Configuíration is active low), and release it once we get the last_byte flag's process done!
     spi_cs_p : process(clk) is 
@@ -212,9 +209,6 @@ begin
             end if;
         end if;
     end process data_in_p;
-
-
-
 
     read_byte <= reg_shift_in; -- controller doesn'T read until done flag is rasied AKA, state is not running any more
     spi_mosi <= reg_shift_out(8);
