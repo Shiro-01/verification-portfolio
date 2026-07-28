@@ -61,4 +61,4 @@ The project code itself is proprietary, so I can’t share it. but the experienc
 
 ## Notes
 
-If you’re reviewing this repo for a role and want more context (requirements, waveforms, verification strategy, etc.), feel free to ask. I’m happy to walk through the design decisions and trade-offs.
+If you’re reviewing this repo for a role and want more context, feel free to ask. I’m happy to walk through the design decisions and trade-offs.
