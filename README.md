@@ -1,10 +1,5 @@
 # RTL Design & Verification Portfolio
 
-Welcome! 👋  
-This repo is my personal portfolio of **FPGA/SoC-ready RTL modules**. My main focus is building designs that are **clean, reusable, and properly verified** 
-
----
-
 ## 🛠 Featured Project 1: AXI-Stream FIFO + UVM Verification (VHDL + SystemVerilog)
 
 A **VHDL AXI-Stream FIFO** verified with a complete **UVM** environment (mixed-language).
