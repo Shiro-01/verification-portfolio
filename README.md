@@ -2,7 +2,7 @@
 
 ## 🛠 Featured Project 1: AXI-Stream FIFO + UVM Verification (VHDL + SystemVerilog)
 
-A **VHDL AXI-Stream FIFO** verified with a complete **UVM** environment (mixed-language).
+A **VHDL AXI-Stream FIFO** verified with a basic **UVM** environment (mixed-language).
 
 **Highlights**
 - **UVM structure:** Agent (Driver / Monitor / Sequencer) + Scoreboard for automated checks.
