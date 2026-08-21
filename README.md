@@ -18,18 +18,6 @@ A **VHDL AXI-Stream FIFO** verified with a complete **UVM** environment (mixed-l
 
 ---
 
-## 🛰 Industrial Experience (Rocket Factory Augsburg)
-
-During my internship at **Rocket Factory Augsburg (RFA)**, I worked on high-speed data acquisition and SoC verification topics.  
-The project code itself is proprietary, so I can’t share it. but the experience strongly shaped how I design and verify RTL today.
-
-**Relevant work I was involved in**
-- **ADC controller design:** Parallel interfaces for multi-channel SAR ADCs.
-- **AXI-Stream integration:** Master interfaces with full backpressure (`TREADY`) and packetization (`TLAST`).
-- **System-level verification:** Behavioral models to emulate hardware delays, contention, and realistic timing.
-
----
-
 ## 💻 Some Tech Stack
 
 - **Languages:** VHDL, SystemVerilog  
