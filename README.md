@@ -19,8 +19,5 @@ A **VHDL AXI-Stream FIFO** verified with a complete **UVM** environment (mixed-l
 - **Tools:** Vivado, GHDL, GTKWave, EDA Playground
 - **Focus areas:** Synchronous design, AXI-Stream, BFM, UVM
 
----
-
-## Notes
-
-If you’re reviewing this repo for a role and want more context, feel free to ask. I’m happy to walk through the design decisions and trade-offs.
+## 🛠 Featured Project 2: UVM for UART
+Not finished yet
