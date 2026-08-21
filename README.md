@@ -3,30 +3,9 @@
 Welcome! 👋  
 This repo is my personal portfolio of **FPGA/SoC-ready RTL modules**. My main focus is building designs that are **clean, reusable, and properly verified** 
 
-My approach is simple:
-- **Verification-first mindset** (self-checking testbenches whenever possible)
-- **Readable RTL** (parameterized, documented, easy to integrate)
-- **Real-world integration** (AXI streaming, backpressure, timing-friendly design)
-
 ---
 
-## 🛠 Featured Project 1: SPI Master IP (VHDL)
-
-A parameterized **VHDL SPI Master** for reliable high-speed peripheral communication.
-
-**Highlights**
-- **Protocol support:** Mode 1 (CPOL=0, CPHA=1) with configurable clock and data width.
-- **Control flow:** Clean `ena` / `last_byte` handling for smooth multi-byte transfers.
-- **Verification:** Includes a small but effective verification setup:
-  - A **BFM** acting as a behavioral SPI Slave
-  - **Self-checking** with VHDL `assert` statements
-  - Edge-case coverage (e.g., `CS_n` de-assertion timing and frame sync)
-
-➡️ **Project folder:** [SPI_MASTER](./SPI_MASTER)
-
----
-
-## 🛠 Featured Project 2: AXI-Stream FIFO + UVM Verification (VHDL + SystemVerilog)
+## 🛠 Featured Project 1: AXI-Stream FIFO + UVM Verification (VHDL + SystemVerilog)
 
 A **VHDL AXI-Stream FIFO** verified with a complete **UVM** environment (mixed-language).
 
